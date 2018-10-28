@@ -18,6 +18,10 @@ function makeBead(x, y) {
 }
 
 function plotNumber(num) {
+    if (isNaN(num)) {
+        throw "Input is not a number"
+    }
+
     if (num >= maxIntSize) {
         throw "Number " + num + " is greater than " + maxIntSize
     }
@@ -115,6 +119,7 @@ function updateNumbers() {
 }
 
 function dropBeads(callback) {
+    isSorting = true
     var dropTable = computeDrops()
     var dy = beadSize + beadSpacing
     var t = dt
@@ -163,10 +168,11 @@ function makeLines() {
     return lines
 }
 
-var lines, numbers, elem, width, height, two, interval
+var lines, numbers, elem, width, height, two, interval, isSorting
 
 
 function reset() {
+    isSorting = false
     clearInterval(interval)
     document.getElementById('two').innerHTML = ''
     lines = []
@@ -191,6 +197,9 @@ reset()
 const input = document.getElementById('numInput')
 
 function addNumber() {
+    if (isSorting) {
+        reset()
+    }
     var number = parseInt(input.value)
     input.value = ""
     plotNumber(number)
