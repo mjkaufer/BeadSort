@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+#instructions {
+    position: absolute;
+    top: 0;
+    left: 2em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 1em;
+    padding-bottom: 1em;
+}
+
+p {
+    line-height: 0.5em;
+}
+
+div > a {
+    margin: 0 1em;
+}
+#numInput {
+    min-width: 8em;
+}
