@@ -214,3 +214,4 @@ input.onkeydown = function(e) {
 document.getElementById('addNumber').onclick = addNumber
 document.getElementById('sort').onclick = sort
 document.getElementById('reset').onclick = reset
+window.onresize = reset
