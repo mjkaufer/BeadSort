@@ -22,7 +22,7 @@ function plotNumber(num) {
         throw "Input is not a number"
     }
 
-    if (num >= maxIntSize) {
+    if (num > maxIntSize) {
         throw "Number " + num + " is greater than " + maxIntSize
     }
 
