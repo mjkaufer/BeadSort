@@ -119,6 +119,9 @@ function updateNumbers() {
 }
 
 function dropBeads(callback) {
+    if (isSorting) {
+        return
+    }
     isSorting = true
     var dropTable = computeDrops()
     var dy = beadSize + beadSpacing
